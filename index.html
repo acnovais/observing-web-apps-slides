@@ -66,7 +66,7 @@
 									</div>
 									<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 40px; height: 40px; left: 680px; top: 540px;">
 											<div class="sl-block-content" style="z-index: 12;">
-													<img data-natural-width="400" data-natural-height="400" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/405792/images/5597702/Twitter_Social_Icon_Circle_Color.svg"/>
+													<img data-natural-width="400" data-natural-height="400" style="" data-lazy-loaded="" data-src="./assets/Twitter_Social_Icon_Circle_Color.svg"/>
 											</div>
 									</div>
 									<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 204px; top: 354px;">
@@ -76,7 +76,7 @@
 									</div>
 									<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 40px; height: 40px; left: 680px; top: 610px;">
 											<div class="sl-block-content" style="z-index: 14;">
-													<img data-natural-width="64" data-natural-height="64" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/405792/images/5597707/GitHub-Mark-Light-64px.png"/>
+													<img data-natural-width="64" data-natural-height="64" style="" data-lazy-loaded="" data-src="./assets/GitHub-Mark-Light-64px.png"/>
 											</div>
 									</div>
 									<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 291px; left: 650px; top: 541px;">
@@ -527,7 +527,11 @@
 									</div>
 									<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 377px;">
 											<div class="sl-block-content" style="z-index: 13;">
-													<p>slides:</p>
+													<p>slides: 
+														<a href="https://acnovais.github.io/observing-web-apps-slides/" target="_blank">
+																<span style="font-size:0.7em">https://acnovais.github.io/observing-web-apps-slides/</span>
+														</a>
+													</p>
 													<p>poc: 
 															<a href="https://github.com/acnovais/observing-web-poc" target="_blank">
 																	<span style="font-size:0.7em">https://github.com/acnovais/observing-web-poc</span>
@@ -576,7 +580,16 @@
 				height: 700,
 				transition: "slide",
 				backgroundTransition: "slide",
-				center: false
+				center: false,
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
 			});
 		</script>
 	</body>
